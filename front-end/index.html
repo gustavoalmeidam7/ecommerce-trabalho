@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FusionTech - Loja de tecnologia com os melhores produtos, como consoles, notebooks, monitores e acessórios gamers.">
+    <meta name="keywords" content="tecnologia, loja, consoles, notebooks, monitores, acessórios gamers">
+    <meta name="author" content="FusionTech">
+    <title>FusionTech</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <main>
+        <header id="cabecario">
+            <div id="nomeCabecario">
+                <h1>FusionTech</h1>
+                <a href="/adicionarProduto.html">Adicionar produto a o catalogo</a>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('ofertas')">Ofertas</button>
+            <button class="tab-button" onclick="openTab('catalogo')">Catálogo</button>
+        </div>
+
+        <div id="ofertas" class="tab-content active">
+            <div class="ofertas-banner">
+                <h2>Ofertas Especiais</h2>
+                <p>Descubra os melhores produtos com descontos incríveis!</p>
+                <button class="btnSaibaMais" onclick="openTab('catalogo')" >Saiba Mais</button>
+            </div>
+
+            <div id="oferta-destaque" class="oferta-item">
+            </div>
+        </div>
+
+        <div id="catalogo" class="produtos">
+            
+        </div>
+
+        <div id="detalhesProduto" class="produtoFullScreenOculto">
+            <button onclick="fecharDetalhesProduto()">X</button>
+        </div>
+
+        <footer id="rodape">
+            <p>Contato:</p>
+            <p>Email: atendimento@fusiontech.com.br</p>
+            <p>Telefone: (99) 99 9999-999</p>
+            <p>Grupo:</p>
+            <ul>
+                <li>Gustavo Almeida Martins</li>
+                <li>Kaique Goten Moreno</li>
+                <li>Maicon Rodrigues</li>
+            </ul>
+        </footer>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

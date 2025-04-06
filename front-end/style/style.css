@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+
+    Cabeçario da página
+
+*/
+
+
+#cabecario {
+    display: flex;
+
+    background-color: #e6dfff;
+    color: #7a37ff;
+
+    width: 100%;
+    height: 5rem;
+}
+
+#nomeCabecario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+    padding-left: 1.5rem;
+}
+
+
+/*
+    
+    Produtos
+
+*/
+
+.produtos {
+    display: none;
+}
+
+.produtos.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    
+    row-gap: 15px;
+    padding-block: 15px;
+    padding-inline: 5rem;
+
+    background-color: #efe5fa;
+    top: 3rem;
+    left: 0;
+    
+    width: 100%;
+    min-height: 100vh;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+
+    border: 3px solid #8e59f7;
+    border-radius: 20px;
+
+    background-color: #ffff;
+
+    height: 45svh;
+    width: 35svh;
+    padding: 1rem;
+
+    text-overflow: clip;
+
+    word-wrap: break-word;
+}
+
+.precoProduto {
+    font-weight: bold;
+    color: #7a37ff;
+
+    font-size: 1.3rem;
+
+    margin-top: auto;
+    margin-bottom: 0px;
+    
+}
+
+.btnDetalhes {
+    margin-top: auto;
+
+    border: #7a37ff solid 1px;
+    background-color: #e6dfff;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.747);
+}
+
+
+.imgProduto {
+    justify-content: center;
+    align-items: center;
+
+    height: 50%;
+    width: auto;
+    object-fit: cover;
+    
+}
+
+
+/*
+
+    Detalhes do produto
+
+*/
+
+
+.produtoFullScreenOculto {
+    display: none;
+}
+
+.produtoFullScreen {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    position: fixed;
+    z-index: 1;
+    background-color: #ffffff;
+    transition: transform 1s ease, box-shadow 0.3s ease;
+
+    border: #7a37ff8c solid ;
+    border-radius: 20px;
+
+    margin-inline: 5rem;
+    top: 6rem;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    height: 85vh;
+    width: 90vw;
+}
+
+.divInfoFullScreen {
+    width: 50%;
+
+    padding-block: 2rem;
+    padding-inline: 3rem;
+}
+
+.imagemFullScreen {
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit:contain;
+}
+
+.descricaoFullScreeen {
+    font-size: 0.8rem;
+    color: #464646;
+    word-wrap: break-word;
+}
+
+.tituloFullScreen {
+    font-family: bold;
+    font-size: 3rem;
+
+    color: #7a37ff;
+
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
+
+    text-overflow: clip;
+    word-wrap: break-word;
+}
+
+.precoFullScreen {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+
+    color: #5d35ad;
+
+    padding-inline: 0.5rem;
+    padding-block: 0.5rem;
+}
+
+.botaoFullScreen {
+    background-color: white;
+    color: #370b8f;
+
+    font-family: Arial, bold, Helvetica, sans-serif;
+    font-size: large;
+    cursor: pointer;
+
+    border: solid;
+    border-radius: 50px;
+
+    width: 3rem;
+    height: 3rem;
+
+    float: right;
+}
+
+
+/*
+
+    Rodapé da página
+
+*/
+
+
+#rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-block: 15px;
+
+    background-color: black;
+    color: white;
+}
+
+
+/*
+
+    Estilo das abas
+
+*/
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #e6dfff;
+    color: #7a37ff;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #7a37ff;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #b3a6ff;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/* Estilo para a aba de Ofertas */
+#ofertas {
+    max-width: 90%; /* Reduz a largura máxima da aba */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ofertas-banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ofertas-banner h2 {
+    font-size: 1.8rem; /* Reduz o tamanho do título */
+    margin-bottom: 10px;
+}
+
+.ofertas-banner p {
+    font-size: 1rem; /* Reduz o tamanho do texto */
+    margin-bottom: 15px;
+}
+
+.ofertas-banner .btnSaibaMais {
+    padding: 8px 16px;
+    font-size: 0.9rem; /* Reduz o tamanho do botão */
+    background-color: #7a37ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ofertas-banner .btnSaibaMais:hover {
+    background-color: #5d2ecc;
+}
+
+.ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.oferta-item {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oferta-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.oferta-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.oferta-item p {
+    font-size: 1.2rem;
+    color: #7a37ff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btnComprar {
+    padding: 10px 20px;
+    background-color: #7a37ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btnComprar:hover {
+    background-color: #5d2ecc;
+}
+
+.oferta-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#oferta-destaque {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 400px; /* Limita a largura do item de destaque */
+    box-sizing: border-box;
+}
+
+#oferta-destaque img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#oferta-destaque h3 {
+    font-size: 1.2rem; /* Reduz o tamanho do título */
+    margin-bottom: 10px;
+}
+
+#oferta-destaque p {
+    font-size: 1rem; /* Reduz o tamanho do texto */
+    margin-bottom: 10px;
+}
+
+#oferta-destaque p s {
+    color: #999;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+#oferta-destaque .btnComprar {
+    padding: 8px 16px;
+    font-size: 0.9rem; /* Reduz o tamanho do botão */
+    background-color: #7a37ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#oferta-destaque .btnComprar:hover {
+    background-color: #5d2ecc;
+}
+
+/*
+
+    Cadastro de produto
+
+*/
+
+.btnCadastrar {
+    display: flex;
+    justify-self: center;
+
+    padding: 10px 20px;
+    background-color: #7a37ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.containerCadastrar {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.inputCadastrar {
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid #7a37ff;
+    border-radius: 10px;
+    cursor: pointer;
+}
