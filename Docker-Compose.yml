@@ -1,0 +1,36 @@
+services:
+  api:
+    image: gustavo/api-ecommerce
+    depends_on:
+      - db
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_IP=db
+      - DATABASE_PASSWORD=senhabanco123
+  front-cliente:
+    image: gustavo/front-ecommerce-cliente
+    depends_on:
+      - api
+    expose:
+      - "80"
+    ports:
+      - "9090:80"
+
+  front-controle:
+    image: gustavo/front-ecommerce-controle
+    depends_on:
+      - api
+    expose:
+      - "80"
+    ports:
+      - "9091:80"
+  db: # Banco de dados
+    image: postgres
+    restart: always
+    volumes:
+      - ./back-end/db-files/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_PASSWORD: "senhabanco123"

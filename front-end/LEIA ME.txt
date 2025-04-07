@@ -1,9 +1,0 @@
-O projeto não consegue executar o javascript se for aberto o html diretamente no browser.
-Uma solução pode ser executar um http server com python:
-
-python -m http.server
-(executar no prompt de comando na pasta raiz do projeto)
-
-e sera aberto o servidor http na porta 8000
-
-ou usar a extensão Live Server do vscode

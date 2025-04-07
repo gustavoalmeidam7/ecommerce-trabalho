@@ -96,42 +96,42 @@ function openTab(tabId) {
 
 const ofertas = [
     {
-        imagem: "image/ps5.webp",
+        imagem: "https://images.tcdn.com.br/img/img_prod/616573/playstation_5_slim_1tb_versao_standard_com_leitor_1174_1_8dcb3fb3ca9d2793533099b7a2aad2ab.jpg",
         titulo: "PlayStation 5 Slim",
         precoOriginal: 3347.07,
     },
     {
-        imagem: "image/iphone.webp",
+        imagem: "https://http2.mlstatic.com/D_NQ_NP_896424-MLA71783367608_092023-O.webp",
         titulo: "Apple iPhone 15",
         precoOriginal: 4679.10,
     },
     {
-        imagem: "image/Acer Aspire 5.webp",
+        imagem: "https://acerstore.vtexassets.com/arquivos/ids/162844/A515-57_1.jpg?v=638271284278670000",
         titulo: "Notebook Acer Aspire 5",
         precoOriginal: 3199.99,
     },
     {
-        imagem: "image/MonitorGamer.webp",
+        imagem: "https://m.media-amazon.com/images/I/61aIuJu0M0L.jpg",
         titulo: "Monitor Gamer LG UltraGear",
         precoOriginal: 1999.99,
     },
     {
-        imagem: "image/AMDRyzen.webp",
+        imagem: "https://images.kabum.com.br/produtos/fotos/520369/processador-amd-ryzen-7-5700x3d-3-6-ghz-4-1ghz-max-turbo-cache-4mb-8-nucleos-16-threads-am4-video-integrado-100-100001503wof_1708023990_gg.jpg",
         titulo: "Processador AMD Ryzen 7",
         precoOriginal: 1749.99,
     },
     {
-        imagem: "image/AcerNitroV15.webp",
+        imagem: "https://images.kabum.com.br/produtos/fotos/564916/notebook-gamer-acer-nitro-v15-intel-core-i5-13420h-8gb-ram-geforce-rtx-3050-ssd-512gb-15-6-fhd-ips-144hz-windows-11-preto-anv15-51-58az_1715197002_gg.jpg",
         titulo: "Notebook Gamer Acer Nitro V15",
         precoOriginal: 4899.99,
     },
     {
-        imagem: "image/HeadsetGamer.webp",
+        imagem: "https://m.media-amazon.com/images/I/61CIubm4EBL._AC_UF894,1000_QL80_.jpg",
         titulo: "Headset Gamer Havit H2002D",
         precoOriginal: 179.99,
     },
     {
-        imagem: "image/CadeiraGamer.webp",
+        imagem: "https://images.kabum.com.br/produtos/fotos/471927/cadeira-gamer-kbm-gaming-cg600-branco-com-almofadas-descanso-para-pernas-retratil-reclinavel-kgcg600br_1700660778_gg.jpg",
         titulo: "Cadeira Gamer KBM! Tempest CG600",
         precoOriginal: 889.90,
     },
@@ -157,6 +157,5 @@ atualizarOferta();
 
 criarCardsProdutos();
 
-setTimeout(atualizarOferta, 5000);
-
+setInterval(atualizarOferta, 5000);
  

@@ -1,0 +1,36 @@
+
+/*
+
+    Cadastro de produto
+
+*/
+
+.btnCadastrar {
+    display: flex;
+    justify-self: center;
+
+    padding: 10px 20px;
+    margin-inline: 1rem;
+
+    background-color: #7a37ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.containerCadastrar {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.inputCadastrar {
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid #7a37ff;
+    border-radius: 10px;
+    cursor: pointer;
+}

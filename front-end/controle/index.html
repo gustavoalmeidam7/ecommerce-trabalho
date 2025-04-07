@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FusionTech - Loja de tecnologia com os melhores produtos, como consoles, notebooks, monitores e acessórios gamers.">
+    <meta name="keywords" content="tecnologia, loja, consoles, notebooks, monitores, acessórios gamers">
+    <meta name="author" content="FusionTech">
+    <title>FusionTech - Adicionar produto</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header id="cabecario">
+        <div id="nomeCabecario">
+            <h1>FusionTech - Painel de controle</h1>
+        </div>
+    </header>
+
+    <div style="display: flex; justify-content: center;">
+        <h1>Adicionar produto a o catalogo:</h1>
+    </div>
+    <div class="containerCadastrar">
+        <p>SKU do produto:</p>
+        <input type="text" class="inputCadastrar" id="skuInput">
+        <p>Nome do produto:</p>
+        <input type="text" class="inputCadastrar" id="nomeInput">
+        <p>Descrição do produto:</p>
+        <input type="text" class="inputCadastrar" id="descricaoInput">
+        <p>Preço do produto:</p>
+        <input type="number" min="0" step="0.01" class="inputCadastrar" id="precoInput">
+        <p>Imagem do produto:</p>
+        <input type="text" class="inputCadastrar" id="imagemInput">
+        <br>
+        <div style="display: flex; justify-content: center; margin-top: 3rem;">
+            <button class="btnCadastrar" onclick="adicionarProduto()">Cadastrar produto</button>
+            <a class="btnCadastrar" href="/editarProduto.html">Editar um produto</a>
+        </div>
+    </div>
+    <script src="scripts/script-adicionar-produto.js"></script>
+</body>
+</html>
