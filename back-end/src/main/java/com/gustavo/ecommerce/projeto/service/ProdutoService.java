@@ -2,6 +2,8 @@ package com.gustavo.ecommerce.projeto.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -18,8 +20,12 @@ import lombok.AllArgsConstructor;
 public class ProdutoService {
     private final ProdutoRepository repository;
 
-    public List<Produto> getAll() {
-        return repository.findAll();
+    public List<ProdutoDTO> getAll() {
+        List<Produto> produtos =  repository.findAll();
+
+        return produtos.stream()
+                       .map(ProdutoDTO::fromEntity)
+                       .collect(Collectors.toList());
     }
 
     public Optional<Produto> getBySKU(String sku) {

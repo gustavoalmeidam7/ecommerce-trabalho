@@ -93,7 +93,7 @@ public class ProdutoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Produto>> getAllProducts() {
+    public ResponseEntity<List<ProdutoDTO>> getAllProducts() {
         return ResponseEntity.ok(service.getAll());
     }
 }
