@@ -1,5 +1,7 @@
 package com.gustavo.ecommerce.projeto.domain.products;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -26,7 +28,7 @@ public class Produto {
 
     private String nome;
     private String descricao;
-    private Double preco;
+    private BigDecimal preco;
     private String imagem;
 
     @Column(name = "indexproduto")

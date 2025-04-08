@@ -1,5 +1,7 @@
 package com.gustavo.ecommerce.projeto.domain.products;
 
+import java.math.BigDecimal;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +18,7 @@ public class ProdutoDTO {
 
     private String nome;
     private String descricao;
-    private Double preco;
+    private BigDecimal preco;
     private String imagem;
 
     public static ProdutoDTO fromEntity(Produto prod) {
