@@ -18,20 +18,62 @@ public class ProdutoDTOValidator implements Validator {
     public void validate(Object target, Errors errors) {
         ProdutoDTO produtoDto = (ProdutoDTO) target;
 
-        if (produtoDto.getSku() == null || produtoDto.getSku().isBlank()) {
-            errors.rejectValue("sku", "O campo 'SKU' está vazio.");
+        {
+            String field = "sku";
+
+            if (produtoDto.getSku() == null || produtoDto.getSku().isBlank()) {
+                errors.rejectValue(field, "O campo 'SKU' está vazio.");
+            }
+    
+            else if (produtoDto.getSku().length() >= 50) {
+                errors.rejectValue(field, "O campo 'SKU' não pode ser maior que 50 caracteres.");
+            }
         }
 
-        if (produtoDto.getNome() == null || produtoDto.getNome().isBlank()) {
-            errors.rejectValue("nome", "O campo 'Nome' está vazio.");
+        {
+            String field = "nome";
+
+            if (produtoDto.getNome() == null || produtoDto.getNome().isBlank()) {
+                errors.rejectValue(field, "O campo 'Nome' está vazio.");
+            }
+    
+            else if (produtoDto.getNome().length() >= 100) {
+                errors.rejectValue(field, "O campo 'Nome' não pode ser maior que 100 caracteres.");
+            }
         }
 
-        if (produtoDto.getPreco() == null || produtoDto.getPreco() == 0) {
-            errors.rejectValue("preco", "O campo 'Preço' está vazio.");
+        {
+            String field = "preco";
+
+            if (produtoDto.getPreco() == null) {
+                errors.rejectValue(field, "O campo 'Preço' está vazio.");
+            }
+    
+            else {
+                if (produtoDto.getPreco().doubleValue() >= 99999.99) {
+                    errors.rejectValue(field, "O campo 'Preço' ultrapassa o valor limite de 99999.99.");
+                }
+        
+                if (produtoDto.getPreco().doubleValue() <= 0) {
+                    errors.rejectValue(field, "O campo 'Preço' não pode ser 0 ou negativo.");
+                }
+    
+                if (produtoDto.getPreco().scale() > 2) {
+                    errors.rejectValue(field, "O campo 'Preço' não pode contem mais de 2 casas decimais.");
+                }
+            }
         }
 
-        if (produtoDto.getImagem() == null || produtoDto.getImagem().isBlank()) {
-            errors.rejectValue("imagem", "O campo 'Imagem' está vazio.");
+        {
+            String field = "imagem";
+
+            if (produtoDto.getImagem() == null || produtoDto.getImagem().isBlank()) {
+                errors.rejectValue(field, "O campo 'Imagem' está vazio.");
+            }
+    
+            else if (produtoDto.getSku().length() >= 255) {
+                errors.rejectValue(field, "O campo 'Imagem' não pode ser maior que 255 caracteres.");
+            }
         }
     }
     
