@@ -31,7 +31,6 @@ main {
 
 #nomeCabecario {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     font-size: 1.5rem;
@@ -48,20 +47,19 @@ main {
 
 */
 
-.produtos {
+
+#produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     
-    row-gap: 15px;
-    padding-block: 15px;
-    padding-inline: 5rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 5rem;
 
     background-color: #efe5fa;
     top: 3rem;
     left: 0;
-    
-    width: 100%;
-    min-height: 100vh;
 }
 
 .produto {
@@ -75,8 +73,9 @@ main {
 
     background-color: #ffff;
 
-    height: 45svh;
-    width: 35svh;
+    max-height: 25rem;
+
+    max-width: 20rem;
     padding: 1rem;
 
     text-overflow: clip;
@@ -87,17 +86,13 @@ main {
 .precoProduto {
     font-weight: bold;
     color: #7a37ff;
-
-    font-size: 1.3rem;
-
     margin-top: auto;
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
     
+    font-size: 1.3rem;
 }
 
 .btnDetalhes {
-    margin-top: auto;
-
     border: #7a37ff solid 1px;
     background-color: #e6dfff;
 
@@ -117,7 +112,7 @@ main {
     align-items: center;
 
     height: 50%;
-    width: auto;
+    width: 1fr;
     object-fit: cover;
     
 }
@@ -139,11 +134,13 @@ main {
     padding: 0;
     box-sizing: border-box;
 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     position: fixed;
     z-index: 1;
+    background-color: #ffffff;
     transition: transform 1s ease, box-shadow 0.3s ease;
 
-    background-color: #ffff;
     border: #7a37ff8c solid ;
     border-radius: 20px;
 
@@ -171,7 +168,7 @@ main {
     height: 100%;
     width: 100%;
 
-    object-fit:contain;
+    object-fit: fill;
 }
 
 .descricaoFullScreeen {
@@ -194,8 +191,7 @@ main {
 }
 
 .precoFullScreen {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: bold;
     font-size: 3rem;
 
     color: #5d35ad;

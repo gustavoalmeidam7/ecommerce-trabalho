@@ -19,7 +19,7 @@ async function PegarProdutoID(id) {
 }
 
 function criarCardsProdutos() {
-    const divProdutos = document.getElementById('catalogo');
+    const divProdutos = document.getElementById('produtos');
 
     PegarTodosProdutos().then(produtos => {
         if (produtos === null) {
@@ -39,6 +39,7 @@ function criarCardsProdutos() {
                 <section class="produto" id="${produto.sku}">
                     <img src="${produto.imagem}" alt="${produto.nome}" class="imgProduto">
                     <p>${produto.nome}</p>
+                    <br>
                     <p class="precoProduto">R$ ${produto.preco}</p>
                     <button class="btnDetalhes" onclick="abrirDetalhesProduto('${produto.sku}')">Detalhes</button>
                 </section>`;
