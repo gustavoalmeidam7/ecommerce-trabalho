@@ -1,5 +1,8 @@
 # E-commerce Full Stack Project
 
+![image](https://github.com/user-attachments/assets/e98106af-1926-477b-a653-1f0ffc5c5866)
+![image](https://github.com/user-attachments/assets/209557a9-fe69-495b-af56-9299046c260e)
+
 Este é um projeto full stack de e-commerce.
 
 ## Tecnologias Utilizadas
